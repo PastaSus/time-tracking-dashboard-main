@@ -1,0 +1,490 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+
+  color: white;
+  background-color: var(--Navy-950);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* 
+05 shadows
+box-shadow: 0 2.4px 4.8px rgba(0, 0, 0, 0.075);
+
+06 border-radius
+default:9px
+medium: 11px
+
+07 whitespace */
+:root {
+  /* ### Primary */
+
+  --Purple-600: hsl(246, 80%, 60%);
+
+  --Orange-300-work: hsl(15, 100%, 70%);
+  --Blue-300-play: hsl(195, 74%, 62%);
+  --Pink-400-study: hsl(348, 100%, 68%);
+  --Green-400-exercise: hsl(145, 58%, 55%);
+  --Purple-700-social: hsl(264, 64%, 52%);
+  --Yellow-300-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Navy-950: hsl(226, 43%, 10%);
+  --Navy-900: hsl(235, 46%, 20%);
+  --Purple-500: hsl(235, 45%, 61%);
+  --Navy-200: hsl(236, 100%, 87%);
+
+  /* ## Typography */
+
+  /* ### Body Copy */
+
+  /* --Font-size-(paragraph): 16px */
+
+  /* spacing / typo system */
+
+  /* Typography System */
+  --font-size-4: 0.25rem; /* 4px */
+  --font-size-8: 0.5rem; /* 8px */
+  --font-size-10: 0.625rem; /* 10px */
+  --font-size-12: 0.75rem; /* 12px */
+  --font-size-14: 0.875rem; /* 14px */
+  --font-size-16: 1rem; /* 16px */
+  --font-size-18: 1.125rem; /* 18px */
+  --font-size-20: 1.25rem; /* 20px */
+  --font-size-24: 1.5rem; /* 24px */
+  --font-size-30: 1.875rem; /* 30px */
+  --font-size-36: 2.25rem; /* 36px */
+  --font-size-44: 2.75rem; /* 44px */
+  --font-size-52: 3.25rem; /* 52px */
+  --font-size-62: 3.875rem; /* 62px */
+  --font-size-74: 4.625rem; /* 74px */
+  --font-size-86: 5.375rem; /* 86px */
+  --font-size-98: 6.125rem; /* 98px */
+
+  /*Clamping/Scaling Typo scale */
+
+  --clamp-font-20: clamp(1.25rem, 2vw, 1.5rem); /* 20px → scales to 24px */
+  --clamp-font-24: clamp(1.5rem, 2.5vw, 1.875rem); /* 24px → scales to 30px */
+  --clamp-font-30: clamp(1.875rem, 3vw, 2.25rem); /* 30px → scales to 36px */
+  --clamp-font-36: clamp(2.25rem, 3.5vw, 2.75rem); /* 36px → scales to 44px */
+  --clamp-font-44: clamp(2.75rem, 4vw, 3.25rem); /* 44px → scales to 52px */
+  --clamp-font-52: clamp(3.25rem, 5vw, 3.875rem); /* 52px → scales to 62px */
+  --clamp-font-62: clamp(3.875rem, 6vw, 4.625rem); /* 62px → scales to 74px */
+  --clamp-font-74: clamp(4.625rem, 7vw, 5.375rem); /* 74px → scales to 86px */
+  --clamp-font-86: clamp(5.375rem, 8vw, 6.125rem); /* 86px → scales to 98px */
+  --clamp-font-98: clamp(6.125rem, 9vw, 7rem); /* 98px → scales to 112px */
+
+  /* Clamp variations */
+  --clamp-font-24-v2: clamp(1.5rem, 2.5vw, 2.75rem); /* 24px → scales to 44px */
+  --clamp-font-24-v3: clamp(1.5rem, 3vw, 3rem); /* 24px → scales to 48px */
+
+  /* Spacing System */
+  --spacing-2: 0.125rem; /* 2px */
+  --spacing-4: 0.25rem; /* 4px */
+  --spacing-8: 0.5rem; /* 8px */
+  --spacing-12: 0.75rem; /* 12px */
+  --spacing-16: 1rem; /* 16px */
+  --spacing-24: 1.5rem; /* 24px */
+  --spacing-32: 2rem; /* 32px */
+  --spacing-48: 3rem; /* 48px */
+  --spacing-64: 4rem; /* 64px */
+  --spacing-80: 5rem; /* 80px */
+  --spacing-96: 6rem; /* 96px */
+  --spacing-128: 8rem; /* 128px */
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.time-tracking-dashboard {
+  display: grid;
+
+  gap: var(--spacing-24);
+
+  max-width: 325px;
+
+  margin-block-start: var(--spacing-64);
+  margin-block-end: var(--spacing-64);
+}
+
+.time-tracking-dashboard__user-info-container {
+  background-color: var(--Navy-900);
+
+  border-radius: 11px;
+}
+
+.time-tracking-dashboard__user-info {
+  background-color: var(--Purple-600);
+
+  align-items: center;
+
+  padding: var(--spacing-24);
+
+  gap: var(--spacing-16);
+
+  border-radius: 11px;
+}
+
+.img__container {
+}
+
+.time-tracking-dashboard__profile {
+  max-width: 60px;
+  border-radius: 50%;
+
+  border: 2px solid white;
+}
+
+.time-tracking__for {
+  margin: 0;
+
+  font-size: var(--font-size-12);
+
+  color: var(--Navy-200);
+}
+
+.time-tracking__name {
+  margin: 0;
+
+  font-size: var(--font-size-24);
+
+  font-weight: 300;
+}
+
+.time-tracking-dashboard__frequency {
+  list-style-type: none;
+
+  padding: var(--spacing-16) 0;
+  margin: 0;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  border-radius: 0 0 9px 9px;
+}
+
+.time-tracking-dashboard__time-frame {
+}
+
+.btn {
+  border: none;
+  background: none;
+
+  color: var(--Purple-500);
+}
+
+.time-frame__btn {
+}
+
+.time-tracking-dashboard__activity {
+  /* background-color: var(--Navy-900); */
+  border-radius: 11px 11px 14px 14px;
+}
+
+.time-tracking-dashboard__activity.work {
+  background-color: var(--Orange-300-work);
+}
+.time-tracking-dashboard__activity.play {
+  background-color: var(--Blue-300-play);
+}
+.time-tracking-dashboard__activity.study {
+  background-color: var(--Pink-400-study);
+}
+.time-tracking-dashboard__activity.exercise {
+  background-color: var(--Green-400-exercise);
+}
+.time-tracking-dashboard__activity.social {
+  background-color: var(--Purple-700-social);
+}
+.time-tracking-dashboard__activity.self-care {
+  background-color: var(--Yellow-300-self-care);
+}
+
+.svg__container {
+  position: relative;
+  overflow: hidden;
+
+  /* display: grid; */
+
+  height: 35px;
+}
+
+.svg__container img {
+  width: 70px;
+
+  position: absolute;
+
+  justify-self: end;
+
+  right: 0;
+  top: 0;
+
+  transform: translate(-20%, -5%);
+}
+
+.svg__container .work__svg {
+  transform: translate(-20%, -15%);
+}
+.svg__container .play__svg {
+  transform: translate(-20%, -5%);
+}
+.svg__container .study__svg {
+}
+.svg__container .exercise__svg {
+  transform: translate(-20%, 0%);
+}
+.svg__container .social__svg {
+  transform: translate(-20%, -15%);
+}
+.svg__container .self-care__svg {
+  transform: translate(-20%, -22%);
+}
+
+.activity__container {
+  background-color: var(--Navy-900);
+
+  border-radius: 11px;
+
+  padding: var(--spacing-24);
+}
+
+.type__container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity__type {
+  font-weight: 500;
+
+  font-size: var(--font-size-18);
+}
+
+.ellipsis__btn {
+  border: none;
+  background: none;
+}
+
+.time-tracking-dashboard__screen-time {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.time-tracking-dashboard__this-week-data {
+  font-size: var(--font-size-30);
+
+  font-weight: 300;
+}
+
+.time-tracking-dashboard__last-week-data {
+  color: var(--Navy-200);
+}
+
+/* states */
+
+.ellipsis__btn {
+  cursor: pointer;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: white;
+}
+
+@media (min-width: 48em) {
+  .time-tracking-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 650px;
+  }
+
+  .time-tracking-dashboard__user-info-container {
+    grid-column: 1 / -1;
+
+    /* justify-self: center; */
+  }
+}
+
+@media (min-width: 90em) {
+  .main {
+    height: 100vh;
+
+    display: grid;
+
+    place-content: center;
+  }
+
+  .time-tracking-dashboard {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
+    max-width: 1000px;
+  }
+
+  .time-tracking-dashboard__user-info-container {
+    display: flex;
+    flex-direction: column;
+
+    grid-column: auto;
+
+    grid-row: span 2;
+
+    /* justify-self: center; */
+  }
+
+  .time-tracking-dashboard__user-info {
+    flex-direction: column;
+    align-items: start;
+
+    gap: var(--spacing-32);
+
+    flex-grow: 0.7;
+
+    padding-block-start: var(--spacing-32);
+  }
+
+  .img__container {
+    /* margin-block-end: ; */
+  }
+
+  .time-tracking-dashboard__profile {
+    max-width: 75px;
+  }
+
+  .time-tracking__for {
+    font-size: var(--font-size-14);
+  }
+
+  .time-tracking-dashboard__profile {
+    justify-self: start;
+  }
+
+  .time-tracking__name {
+    font-size: var(--font-size-36);
+
+    line-height: 1.3;
+  }
+
+  .time-tracking-dashboard__frequency {
+    flex-direction: column;
+
+    padding-inline-start: var(--spacing-24);
+
+    gap: var(--spacing-16);
+
+    padding-block-end: 0;
+  }
+
+  .activity__container {
+    display: grid;
+
+    gap: var(--spacing-12);
+  }
+
+  .time-tracking-dashboard__this-week-data {
+    font-size: var(--font-size-52);
+  }
+
+  .time-tracking-dashboard__screen-time {
+    flex-direction: column;
+  }
+}

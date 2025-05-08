@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="time-tracking-dashboard container">
+        <div class="time-tracking-dashboard__user-info-container">
+          <div class="time-tracking-dashboard__user-info flex">
+            <div class="img__container">
+              <img
+                src="images/image-jeremy.png"
+                alt=""
+                class="time-tracking-dashboard__profile"
+              />
+            </div>
+            <div>
+              <p class="time-tracking__for">Report for</p>
+              <h1 class="time-tracking__name">Jeremy Robson</h1>
+            </div>
+          </div>
+          <ul class="time-tracking-dashboard__frequency">
+            <li class="time-tracking-dashboard__time-frame">
+              <button class="time-frame__btn btn" data-period="daily">
+                Daily
+              </button>
+            </li>
+            <li class="time-tracking-dashboard__time-frame">
+              <button class="time-frame__btn btn active" data-period="weekly">
+                Weekly
+              </button>
+            </li>
+            <li class="time-tracking-dashboard__time-frame">
+              <button class="time-frame__btn btn" data-period="monthly">
+                Monthly
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <article
+          class="time-tracking-dashboard__activity work"
+          data-activity="work"
+        >
+          <div class="svg__container work">
+            <img src="images/icon-work.svg" alt="" class="work__svg" />
+          </div>
+          <div class="activity__container">
+            <div class="type__container flex">
+              <p class="activity__type">Work</p>
+              <button class="ellipsis__btn">
+                <img src="images/icon-ellipsis.svg" alt="" />
+              </button>
+            </div>
+            <div class="time-tracking-dashboard__screen-time flex">
+              <p class="time-tracking-dashboard__this-week-data">32hrs</p>
+              <p class="time-tracking-dashboard__last-week-data">
+                Last Week - 36hrs
+              </p>
+            </div>
+          </div>
+          <!-- 5hrs -->
+          <!-- daily -->
+          <!-- Previous - 7hrs -->
+          <!-- daily -->
+
+          <!-- 32hrs -->
+          <!-- weekly -->
+          <!-- Previous - 36hrs -->
+          <!-- weekly -->
+
+          <!-- 103hrs -->
+          <!-- monthly -->
+          <!-- Previous - 128hrs -->
+          <!-- monthly -->
+        </article>
+
+        <article
+          class="time-tracking-dashboard__activity play"
+          data-activity="play"
+        >
+          <div class="svg__container play">
+            <img src="images/icon-play.svg" alt="" class="play__svg" />
+          </div>
+          <div class="activity__container">
+            <div class="type__container flex">
+              <p class="activity__type">Play</p>
+              <button class="ellipsis__btn">
+                <img src="images/icon-ellipsis.svg" alt="" />
+              </button>
+            </div>
+            <div class="time-tracking-dashboard__screen-time flex">
+              <p class="time-tracking-dashboard__this-week-data">10hrs</p>
+              <p class="time-tracking-dashboard__last-week-data">
+                Last Week - 8hrs
+              </p>
+            </div>
+          </div>
+
+          <!-- Play 1hr -->
+          <!-- daily -->
+          <!-- Previous - 2hrs -->
+          <!-- daily -->
+
+          <!-- 10hrs -->
+          <!-- weekly -->
+          <!-- Previous - 8hrs -->
+          <!-- weekly -->
+
+          <!-- 23hrs -->
+          <!-- monthly -->
+          <!-- Previous - 29hrs -->
+          <!-- monthly -->
+        </article>
+
+        <article
+          class="time-tracking-dashboard__activity study"
+          data-activity="study"
+        >
+          <div class="svg__container study">
+            <img src="images/icon-study.svg" alt="" class="study__svg" />
+          </div>
+          <div class="activity__container">
+            <div class="type__container flex">
+              <p class="activity__type">Study</p>
+              <button class="ellipsis__btn">
+                <img src="images/icon-ellipsis.svg" alt="" />
+              </button>
+            </div>
+            <div class="time-tracking-dashboard__screen-time flex">
+              <p class="time-tracking-dashboard__this-week-data">4hrs</p>
+              <p class="time-tracking-dashboard__last-week-data">
+                Last Week - 7hrs
+              </p>
+            </div>
+          </div>
+
+          <!-- Study 0hrs -->
+          <!-- daily -->
+          <!-- Previous - 1hr -->
+          <!-- daily -->
+
+          <!-- 4hrs -->
+          <!-- weekly -->
+          <!-- Previous - 7hrs -->
+          <!-- weekly -->
+
+          <!-- 13hrs -->
+          <!-- monthly -->
+          <!-- Previous - 19hrs -->
+          <!-- monthly -->
+        </article>
+
+        <article
+          class="time-tracking-dashboard__activity exercise"
+          data-activity="exercise"
+        >
+          <div class="svg__container exercise">
+            <img src="images/icon-exercise.svg" alt="" class="exercise__svg" />
+          </div>
+          <div class="activity__container">
+            <div class="type__container flex">
+              <p class="activity__type">Exercise</p>
+              <button class="ellipsis__btn">
+                <img src="images/icon-ellipsis.svg" alt="" />
+              </button>
+            </div>
+            <div class="time-tracking-dashboard__screen-time flex">
+              <p class="time-tracking-dashboard__this-week-data">4hrs</p>
+              <p class="time-tracking-dashboard__last-week-data">
+                Last Week - 5hrs
+              </p>
+            </div>
+          </div>
+          <!-- Exercise 1hr -->
+          <!-- daily -->
+          <!-- Previous - 1hr -->
+          <!-- daily -->
+
+          <!-- 4hrs -->
+          <!-- weekly -->
+          <!-- Previous - 5hrs -->
+          <!-- weekly -->
+          <!--  -->
+          <!-- 11hrs -->
+          <!-- monthly -->
+          <!-- Previous - 18hrs -->
+          <!-- monthly -->
+        </article>
+
+        <article
+          class="time-tracking-dashboard__activity social"
+          data-activity="social"
+        >
+          <div class="svg__container social">
+            <img src="images/icon-social.svg" alt="" class="social__svg" />
+          </div>
+          <div class="activity__container">
+            <div class="type__container flex">
+              <p class="activity__type">Social</p>
+              <button class="ellipsis__btn">
+                <img src="images/icon-ellipsis.svg" alt="" />
+              </button>
+            </div>
+            <div class="time-tracking-dashboard__screen-time flex">
+              <p class="time-tracking-dashboard__this-week-data">5hrs</p>
+              <p class="time-tracking-dashboard__last-week-data">
+                Last Week - 10hrs
+              </p>
+            </div>
+          </div>
+          <!-- Social 1hr -->
+          <!-- daily -->
+          <!-- Previous - 3hrs -->
+          <!-- daily -->
+
+          <!-- 5hrs -->
+          <!-- weekly -->
+          <!-- Previous - 10hrs -->
+          <!-- weekly -->
+
+          <!-- 21hrs -->
+          <!-- monthly -->
+          <!-- Previous - 23hrs -->
+          <!-- monthly -->
+        </article>
+
+        <article
+          class="time-tracking-dashboard__activity self-care"
+          data-activity="self care"
+        >
+          <div class="svg__container self-care">
+            <img
+              src="images/icon-self-care.svg"
+              alt=""
+              class="self-care__svg"
+            />
+          </div>
+          <div class="activity__container">
+            <div class="type__container flex">
+              <p class="activity__type">Self Care</p>
+              <button class="ellipsis__btn">
+                <img src="images/icon-ellipsis.svg" alt="" />
+              </button>
+            </div>
+            <div class="time-tracking-dashboard__screen-time flex">
+              <p class="time-tracking-dashboard__this-week-data">2hrs</p>
+              <p class="time-tracking-dashboard__last-week-data">
+                Last Week - 2hrs
+              </p>
+            </div>
+          </div>
+
+          <!-- Self Care 0hrs -->
+          <!-- daily -->
+          <!-- Previous - 1hr -->
+          <!-- daily -->
+
+          <!-- 2hrs -->
+          <!-- weekly -->
+          <!-- Previous - 2hrs -->
+          <!-- weekly -->
+
+          <!-- 7hrs -->
+          <!-- monthly -->
+          <!-- Previous - 11hrs -->
+          <!-- monthly -->
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
